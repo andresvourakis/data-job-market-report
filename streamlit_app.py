@@ -396,20 +396,22 @@ def display_expandable_table_with_percentages(nested_dict, total_filtered_jobs):
 st.title(":bar_chart: Job Market Report")
 st.subheader(f"_{selected_title} ({','.join(selected_experience_level)})_")
 
-st.markdown("### Overview")
-st.markdown("Overview of which type of relevent keywords are present in job ads")
+with st.container():
+    st.markdown("### Overview")
+    st.markdown("Overview of which type of relevent keywords are present in job ads")
 
-top_left_column, top_right_column = st.columns(2)
+    top_left_column, top_right_column = st.columns(2)
 
-with top_left_column:
-    visualize_percent_job_total(keyword_group_count, total_filtered_jobs, 10, "Top Skills")
+    with top_left_column:
+        visualize_percent_job_total(keyword_group_count, total_filtered_jobs, 10, "Top Skills")
 
-with top_right_column:
-    visualize_spider_chart(keyword_category_count, "Distribution of Skils")
+    with top_right_column:
+        visualize_spider_chart(keyword_category_count, "Distribution of Skils")
 
-st.markdown("### Top Skills per Category")
-st.markdown("Relevant keywords grouped into common categories")
-display_expandable_table_with_percentages(keyword_category_count, total_filtered_jobs)
+with st.container():
+    st.markdown("### Top Skills per Category")
+    st.markdown("Relevant keywords grouped into common categories")
+    display_expandable_table_with_percentages(keyword_category_count, total_filtered_jobs)
 
 # Embed footer in Streamlit app
 st.markdown(footer, unsafe_allow_html=True)
