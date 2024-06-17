@@ -314,20 +314,50 @@ footer = """
         <br> <!-- Add an empty line of text -->
     </footer>
     """
+# Custom footer HTML
+custom_footer = """
+    <style>
+    #custom-footer {
+        position: relative;
+        background-color: #3D8693;
+        color: white;
+        text-align: center;
+        padding: 0px;
+        margin-top: 10px;
+    }
+    #custom-footer p {
+        margin: 3px 0;  /* Adjust margin to reduce space between lines */
+        padding: 0;
+    }
+    #custom-footer a {
+        color: #FFD700 !important;  /* Change hyperlink color here (yellow) */
+        text-decoration: none;
+    }
+    #custom-footer a:hover {
+        color: #FFFF00;  /* Optional: Change color on hover (gold) */
+        text-decoration: underline;
+    }
+    </style>
+    <footer>
+        <br>
+        <p>Created by Andres Vourakis – Connect with me on 
+        <a href="https://www.linkedin.com/in/andresvourakis/" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" width="20"/>
+        </a>
+        <p>This resource is part of 
+        <a href="https://course.andresvourakis.com/ds-hire-ready" target="_blank">
+            Data Science Hire Ready
+        </a></p>
+        <br> <!-- Add an empty line of text -->
+    </footer>
+    """
 
+# Hide the "Made with Streamlit" footer
 hide_streamlit_style = """
     <style>
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
-    .css-1q1n0ol {visibility: visible;}
-    .css-1q1n0ol:after {
-        content:'';
-        visibility: visible;
-        display: block;
-        position: relative;
-        padding: 5px;
-        top: 2px;
-    }
+    #custom-footer {visibility: visible;}
     </style>
     """
 
@@ -429,9 +459,6 @@ with st.container():
     st.markdown("Relevant keywords grouped into common categories")
     display_expandable_table_with_percentages(keyword_category_count, total_filtered_jobs)
 
-# Embed footer in Streamlit app
-st.markdown(footer, unsafe_allow_html=True)
-
 # For filter secition
 st.sidebar.markdown(
     f'''
@@ -444,4 +471,8 @@ st.sidebar.markdown(
     - **Jobs Location**: United States
     ''')
 
+# Hide default Streamlit app
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
+
+# Embed custom footer in Streamlit app
+st.markdown(custom_footer, unsafe_allow_html=True)
