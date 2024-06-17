@@ -8,6 +8,7 @@ import json
 import plotly.express as px
 import math
 import pickle
+import nltk
 from nltk.stem import WordNetLemmatizer
 from collections import Counter
 import re
