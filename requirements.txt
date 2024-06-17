@@ -2,4 +2,3 @@ streamlit==1.23.0
 pandas==1.5.0
 plotly==5.15.0
 nltk==3.8.1
-git+https://github.com/PablocFonseca/streamlit-aggrid.git
