@@ -16,6 +16,10 @@ import os
 import plotly.graph_objects as go
 import random
 
+# Download NLTK data
+nltk.download('wordnet')
+nltk.download('omw-1.4')
+
 #######################################
 # PAGE SETUP
 #######################################
