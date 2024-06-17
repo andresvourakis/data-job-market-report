@@ -204,7 +204,7 @@ def visualize_percent_job_total(keyword_count, total_job_ads, top, title):
     # Update text position and format
     fig.update_traces(texttemplate='%{text:.0f}%', textposition='outside')
     
-    st.plotly_chart(fig)
+    st.plotly_chart(fig, use_container_width=True)
 
 
 def visualize_category_percent_job_total(category_counts, total_job_ads):
