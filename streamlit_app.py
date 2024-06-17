@@ -277,43 +277,6 @@ def visualize_spider_chart(category_counts, title):
     # Display the chart in Streamlit
     st.plotly_chart(fig)
 
-# Footer HTML and CSS
-footer = """
-    <style>
-    footer {
-        position: relative;
-        background-color: #3D8693;
-        color: white;
-        text-align: center;
-        padding: 0px;
-        margin-top: 10px;
-    }
-    footer p {
-        margin: 3px 0;  /* Adjust margin to reduce space between lines */
-        padding: 0;
-    }
-    footer a {
-        color: #FFD700 !important;  /* Change hyperlink color here (yellow) */
-        text-decoration: none;
-    }
-    footer a:hover {
-        color: #FFFF00;  /* Optional: Change color on hover (gold) */
-        text-decoration: underline;
-    }
-    </style>
-    <footer>
-        <br>
-        <p>Created by Andres Vourakis – Connect with me on 
-        <a href="https://www.linkedin.com/in/andresvourakis/" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" width="20"/>
-        </a>
-        <p>This resource is part of 
-        <a href="https://course.andresvourakis.com/ds-hire-ready" target="_blank">
-            Data Science Hire Ready
-        </a></p>
-        <br> <!-- Add an empty line of text -->
-    </footer>
-    """
 # Custom footer HTML
 custom_footer = """
     <style>
@@ -338,7 +301,7 @@ custom_footer = """
         text-decoration: underline;
     }
     </style>
-    <footer>
+    <footer id="custom-footer">
         <br>
         <p>Created by Andres Vourakis – Connect with me on 
         <a href="https://www.linkedin.com/in/andresvourakis/" target="_blank">
