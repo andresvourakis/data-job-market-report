@@ -279,41 +279,57 @@ def visualize_spider_chart(category_counts, title):
 
 # Footer HTML and CSS
 footer = """
-<style>
-footer {
-    position: relative;
-    background-color: #3D8693;
-    color: white;
-    text-align: center;
-    padding: 0px;
-    margin-top: 10px;
-}
-footer p {
-    margin: 3px 0;  /* Adjust margin to reduce space between lines */
-    padding: 0;
-}
-footer a {
-    color: #FFD700 !important;  /* Change hyperlink color here (yellow) */
-    text-decoration: none;
-}
-footer a:hover {
-    color: #FFFF00;  /* Optional: Change color on hover (gold) */
-    text-decoration: underline;
-}
-</style>
-<footer>
-    <br>
-    <p>Created by Andres Vourakis – Connect with me on 
-    <a href="https://www.linkedin.com/in/andresvourakis/" target="_blank">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" width="20"/>
-    </a>
-    <p>This resource is part of 
-    <a href="https://course.andresvourakis.com/ds-hire-ready" target="_blank">
-        Data Science Hire Ready
-    </a></p>
-    <br> <!-- Add an empty line of text -->
-</footer>
-"""
+    <style>
+    footer {
+        position: relative;
+        background-color: #3D8693;
+        color: white;
+        text-align: center;
+        padding: 0px;
+        margin-top: 10px;
+    }
+    footer p {
+        margin: 3px 0;  /* Adjust margin to reduce space between lines */
+        padding: 0;
+    }
+    footer a {
+        color: #FFD700 !important;  /* Change hyperlink color here (yellow) */
+        text-decoration: none;
+    }
+    footer a:hover {
+        color: #FFFF00;  /* Optional: Change color on hover (gold) */
+        text-decoration: underline;
+    }
+    </style>
+    <footer>
+        <br>
+        <p>Created by Andres Vourakis – Connect with me on 
+        <a href="https://www.linkedin.com/in/andresvourakis/" target="_blank">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" width="20"/>
+        </a>
+        <p>This resource is part of 
+        <a href="https://course.andresvourakis.com/ds-hire-ready" target="_blank">
+            Data Science Hire Ready
+        </a></p>
+        <br> <!-- Add an empty line of text -->
+    </footer>
+    """
+
+hide_streamlit_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    .css-1q1n0ol {visibility: visible;}
+    .css-1q1n0ol:after {
+        content:'';
+        visibility: visible;
+        display: block;
+        position: relative;
+        padding: 5px;
+        top: 2px;
+    }
+    </style>
+    """
 
 # Function to display the nested dictionary as an expandable table with percentages, sorted by count, and ranked
 def display_expandable_table_with_percentages(nested_dict):
@@ -427,3 +443,5 @@ st.sidebar.markdown(
     - **Update Frequency**: Weekly
     - **Jobs Location**: United States
     ''')
+
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
