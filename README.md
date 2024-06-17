@@ -4,7 +4,7 @@ A dashboard that provides insights on the current data job market by analyzing h
 
 ## App
 
-[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://population-dashboard.streamlit.app/](https://datajobmarket.streamlit.app/))
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://datajobmarket.streamlit.app/)
 
 ## Jupyter notebook
 [![Jupyter Notebook](https://upload.wikimedia.org/wikipedia/commons/3/38/Jupyter_logo.svg)]()
