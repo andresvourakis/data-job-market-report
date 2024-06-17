@@ -12,6 +12,7 @@ from nltk.stem import WordNetLemmatizer
 from collections import Counter
 import re
 from collections import defaultdict
+import os
 import plotly.graph_objects as go
 import random
 from st_aggrid import AgGrid, GridOptionsBuilder
@@ -32,6 +33,8 @@ st.set_page_config(
 # DATA LOADING
 #######################################
 
+data_directory = './data'
+
 # Load the pre-processed data
 pickled_file_paths = ['keyword_categories.pkl', 'keyword_group_patterns.pkl', 'keyword_variation_patterns.pkl']
 lemmatizer = WordNetLemmatizer()
@@ -40,7 +43,8 @@ lemmatizer = WordNetLemmatizer()
 def open_pickled_files(file_paths):
     pickled_data = {}
     for file in file_paths:
-        with open(file, 'rb') as f:
+        file_path = os.path.join(data_directory, file)
+        with open(file_path, 'rb') as f:
             pickled_data[file] = pickle.load(f)
     return pickled_data
 
@@ -53,7 +57,8 @@ keyword_group_patterns = pickled_data['keyword_group_patterns.pkl']
 keyword_variation_patterns = pickled_data['keyword_variation_patterns.pkl']
 
 # Read job descriptions
-job_descriptions_df = pd.read_csv('job_descriptions.csv')
+file_path = os.path.join(data_directory, 'job_descriptions.csv')
+job_descriptions_df = pd.read_csv(file_path)
 
 #######################################
 # SIDEBAR FILTERS
