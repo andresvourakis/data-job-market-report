@@ -400,7 +400,7 @@ with st.container():
     st.markdown("### Overview")
     st.markdown("Overview of which type of relevent keywords are present in job ads")
 
-    top_left_column, top_right_column = st.columns(2)
+    top_left_column, top_right_column = st.columns([2, 1])  # Adjust column width
 
     with top_left_column:
         visualize_percent_job_total(keyword_group_count, total_filtered_jobs, 10, "Top Skills")
