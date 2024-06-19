@@ -1,18 +1,3 @@
-# Inject Google Analytics script
-google_analytics_script = """
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FX1Q0H2QQ0"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-FX1Q0H2QQ0');
-    </script>
-    """
-
-st.markdown(google_analytics_script, unsafe_allow_html=True)
-
 #######################################
 # IMPORT LIBRARIES
 #######################################
@@ -39,6 +24,21 @@ nltk.download('omw-1.4')
 #######################################
 # PAGE SETUP
 #######################################
+
+# Inject Google Analytics script
+google_analytics_script = """
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FX1Q0H2QQ0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FX1Q0H2QQ0');
+    </script>
+    """
+
+st.markdown(google_analytics_script, unsafe_allow_html=True)
 
 # Set page configuration
 st.set_page_config(
