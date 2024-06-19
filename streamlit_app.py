@@ -401,7 +401,7 @@ def display_expandable_table_with_percentages(nested_dict, total_filtered_jobs):
 # STREAMLIT LAYOUT
 #######################################
 
-st.title(":bar_chart: Job Market Report")
+st.title(":bar_chart: Data Job Market Report")
 st.subheader(f"_{selected_title} ({','.join(selected_experience_level)})_")
 
 with st.container():
