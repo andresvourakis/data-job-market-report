@@ -414,7 +414,7 @@ with st.container():
         visualize_percent_job_total(keyword_group_count, total_filtered_jobs, 10, "Top Skills")
 
     with top_right_column:
-        visualize_spider_chart(keyword_category_count, "Distribution of Skils")
+        visualize_spider_chart(keyword_category_count, "Distribution of Skills")
 
 with st.container():
     st.markdown("### Top Skills per Category")
