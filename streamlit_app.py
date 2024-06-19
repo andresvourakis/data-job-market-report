@@ -308,7 +308,7 @@ custom_footer = """
             <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" width="20"/>
         </a>
         <p>This resource is part of 
-        <a href="https://course.andresvourakis.com/ds-hire-ready" target="_blank">
+        <a href="https://bit.ly/45ymPBf" target="_blank">
             Data Science Hire Ready
         </a></p>
         <br> <!-- Add an empty line of text -->
