@@ -25,6 +25,14 @@ nltk.download('omw-1.4')
 # PAGE SETUP
 #######################################
 
+# Set page configuration
+st.set_page_config(
+    page_title="Data Job Market Insights",
+    page_icon=":bar_chart:",
+    layout="wide",
+    initial_sidebar_state="expanded",
+)
+
 # Inject Google Analytics script
 google_analytics_script = """
     <!-- Google tag (gtag.js) -->
@@ -39,14 +47,6 @@ google_analytics_script = """
     """
 
 st.markdown(google_analytics_script, unsafe_allow_html=True)
-
-# Set page configuration
-st.set_page_config(
-    page_title="Data Job Market Insights",
-    page_icon=":bar_chart:",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
 
 #######################################
 # DATA LOADING
