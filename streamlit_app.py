@@ -1,3 +1,18 @@
+# Inject Google Analytics script
+google_analytics_script = """
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FX1Q0H2QQ0"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-FX1Q0H2QQ0');
+    </script>
+    """
+
+st.markdown(google_analytics_script, unsafe_allow_html=True)
+
 #######################################
 # IMPORT LIBRARIES
 #######################################
@@ -396,7 +411,6 @@ def display_expandable_table_with_percentages(nested_dict, total_filtered_jobs):
                         )
                     }
                 )
-
 
 #######################################
 # STREAMLIT LAYOUT
