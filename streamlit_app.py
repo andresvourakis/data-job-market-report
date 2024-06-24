@@ -406,7 +406,7 @@ st.subheader(f"_{selected_title} ({','.join(selected_experience_level)})_")
 
 with st.container():
     st.markdown("### Overview")
-    st.markdown("Overview of which type of relevent keywords are present in job ads")
+    st.markdown("Overview of which type of relevent keywords are present in data job ads")
 
     top_left_column, top_right_column = st.columns(2)  # Adjust column width
 
