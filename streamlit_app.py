@@ -72,9 +72,8 @@ job_descriptions_df = pd.read_csv(file_path)
 st.sidebar.header("Filters")
 experience_level = job_descriptions_df['experience_level_formatted'].unique()
 title = job_descriptions_df['title_formatted'].unique()
-default_title = "Data Scientist" if "Data Scientist" in title else title[0]
 
-selected_title = st.sidebar.selectbox("Job Title", default_title, index=0)
+selected_title = st.sidebar.selectbox("Job Title", title, index=1)
 selected_experience_level = st.sidebar.multiselect("Experience Level", experience_level, default=experience_level[0])
 
 # Apply filters
