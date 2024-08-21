@@ -303,14 +303,11 @@ custom_footer = """
     </style>
     <footer id="custom-footer">
         <br>
-        <p>Created by Andres Vourakis – Connect with me on 
-        <a href="https://www.linkedin.com/in/andresvourakis/" target="_blank">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/linkedin.png" width="20"/>
-        </a>
-        <p>For more resources, subscribe for free to my newsletter: 
+        <p>For more resources, subscribe for <b>free</b> to my weekly newsletter: 
         <a href="https://bit.ly/4cfgFb7" target="_blank">
             "To Be a Data Scientist"
         </a></p>
+        <p><i>Created by Andres Vourakis</p></i>
         <br> <!-- Add an empty line of text -->
     </footer>
     """
